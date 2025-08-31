@@ -1,0 +1,10 @@
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git add .
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git commit ./test/1st attempt.txt -m "1st attempt"
+error: pathspec './test/1st' did not match any file(s) known to git
+error: pathspec 'attempt.txt' did not match any file(s) known to git
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ 
+
+
+<!-- * directory must be stringed before commiting if it has a space * -->
+
+git commit "./test/1st attempt.text" -m "1st attempt"

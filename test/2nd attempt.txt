@@ -1,0 +1,21 @@
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git add .
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git commit ./readme.md -m "readme file"
+[main 09a86ec] readme file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.md
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 301 bytes | 301.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sudo-stanly/github.git
+   71c7ce3..09a86ec  main -> main
+branch 'main' set up to track 'origin/main'.
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ 
+
+
+
+<!-- * branch is now commited properly * -->

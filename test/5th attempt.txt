@@ -1,0 +1,65 @@
+rewriting branch name with git history
+
+git rebase -i --root
+(edit the 2nd and 3rd commit)
+
+
+from ./branch/... to "branch 1 folder"
+change the keyword <pick> to <reword> before the new text
+example: reword "new message"
+ save file
+ ctrl+o -> write file
+ enter -> save
+ ctrl+x -> exit
+
+ same process again
+  write the new message on the old message
+  ctrl+o -> write file
+  enter -> save
+  ctrl+x -> exit
+
+check line:
+    git log --oneline
+
+git push -u origin main --force
+
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git log --oneline
+115155e (HEAD -> main, origin/main) 4th attempt
+a98a3ee Fix: corrected 3rd attempt text file
+05e750b 2nd attempt
+57306f7 1st attempt
+5c29e60 readme file
+b42ccdb ./branch 2/foo.txt
+c1982a2 ./branch 1/foo.txt
+516472e .
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git rebase -i --root
+[detached HEAD 1e86c08] branch 1 text file
+ Date: Sun Aug 31 15:57:12 2025 +0800
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branch 1/foo.txt
+Successfully rebased and updated refs/heads/main.
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git log --oneline
+c2ea053 (HEAD -> main) 4th attempt
+419c300 Fix: corrected 3rd attempt text file
+7b27298 2nd attempt
+87c2204 1st attempt
+282d637 readme file
+87171cc ./branch 2/foo.txt
+1e86c08 branch 1 text file
+516472e .
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git rebase -i --root
+[detached HEAD a0b9c33] branch 2 text file
+ Date: Sun Aug 31 15:57:29 2025 +0800
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branch 2/foo.txt
+Successfully rebased and updated refs/heads/main.
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ git log --oneline
+1e80f30 (HEAD -> main) 4th attempt
+8d5cfa8 Fix: corrected 3rd attempt text file
+db198af 2nd attempt
+95c3ceb 1st attempt
+acf655c readme file
+a0b9c33 branch 2 text file
+1e86c08 branch 1 text file
+516472e .
+aspire@aspire:~/Documents/Git projects/Github-Test Folder$ 
